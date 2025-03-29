@@ -1,12 +1,36 @@
-# React + Vite
+# OTP Input Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React component for handling OTP (One-Time Password) input fields, featuring auto-focus, digit-wise input, backspace handling, and form validation.
 
-Currently, two official plugins are available:
+## Features
+- Automatically moves to the next field upon input.
+- Prevents non-numeric characters from being entered.
+- Allows seamless backspace navigation.
+- Alerts the user when all OTP fields are filled.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##Try here: https://otp-logic-react.vercel.app/
 
-## Expanding the ESLint configuration
+## Props
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Prop Name | Type  | Description |
+|-----------|-------|-------------|
+| `number` | `number` | Specifies the number of OTP digits |
+
+## Component Breakdown
+
+- **State Management**: Uses `useState` to manage OTP digits.
+- **Ref Handling**: Uses `useRef` for direct DOM manipulation (auto-focus on inputs).
+- **Auto Navigation**: Moves cursor to the next input field upon entry.
+- **Backspace Handling**: Moves cursor back when deleting an empty field.
+- **Validation**: Ensures only numbers are entered.
+
+
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Developed by jenish(https://github.com/jenish-25). Contributions are welcome!
+
